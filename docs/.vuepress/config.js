@@ -4,15 +4,18 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
   ],
+  locales: [{ '/': { lang: 'zh-CN' } }],
   theme: 'antdocs',
   themeConfig: {
     logo: '/logo.png',
     nav: [
       { text: '博客', link: '/blog/' },
-      { 
+      {
         text: '开课啦',
+        link: '/course/',
         items: [
-          { text: 'Flex布局', link: '/course/flex/' },
+          { text: 'CSS世界', link: '/course/css/' },
+          { text: 'Vue3.0源码分析', link: '/course/vue/' },
           { text: 'Vue3.0源码分析', link: '/course/vue/' },
         ],
       },
@@ -22,8 +25,7 @@ module.exports = {
     ],
     sidebar: {
       '/blog/': ['/blog/'],
-      '/course/flex/': ['/course/flex/'],
-      '/course/vue/': ['/course/vue/'],
+      '/course/css/': ['/course/css/', 'flex'],
       '/thing/': ['/thing/'],
       '/photo/': ['/photo/', 'happy'],
     },
@@ -32,7 +34,7 @@ module.exports = {
     lastUpdated: '上次更新',
     editLinks: false,
     ads:{
-      style: 2, 
+      style: 2,
       image: 'https://www.rainyun.com/img/rainyun.png',
       text: '免费又稳定，签到换延期，来试试雨云主机...',
       link: 'http://redirect.rainyun.cn/?ref=11126',
