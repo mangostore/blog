@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bfc</title>
+  <style>
+    .bfc {
+      /* 根节点 */
+      /* 定位 */
+      position: absolute;
+      position: fixed;
+      /* 块级类型 */
+      /* display: inline-block; 
+      display: table;
+      display: flex;
+      display: grid; */
+      /* 浮动 */
+      /* float: left; */
+      /* 溢出 */
+      /* overflow: auto;
+      overflow: hidden;
+      overflow: scroll; */
+      border: 1px solid #333;
+    }
+
+    .brother {
+      float: left;
+    }
+
+    .flbox {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      margin: 20px;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="bfc">
+    <div class="flbox"></div>
+    <div class="flbox"></div>
+  </div>
+  这里是文字
+  <div class="brother">bfc brother</div>
+</body>
+</html>

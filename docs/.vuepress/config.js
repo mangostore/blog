@@ -15,17 +15,34 @@ module.exports = {
         link: '/course/',
         items: [
           { text: 'CSS世界', link: '/course/css/' },
-          { text: 'Vue3.0源码分析', link: '/course/vue/' },
-          { text: 'Vue3.0源码分析', link: '/course/vue/' },
+          { text: 'JS基础', link: '/course/js/' },
         ],
       },
-      { text: '好物推荐', link: '/thing/' },
-      { text: '云相册', link: '/photo/' },
+      // { text: '好物推荐', link: '/thing/' },
+      // { text: '云相册', link: '/photo/' },
       { text: '简历', link: '/resume/' },
     ],
     sidebar: {
-      '/blog/': ['/blog/'],
-      '/course/css/': ['/course/css/', 'flex'],
+      '/blog/': ['/blog/', 'proxy', 'immer'],
+      '/course/css/': [
+        '/course/css/',
+        {
+          title: '理论基础',
+          collapsable: false,
+          children: ['flex'],
+        },
+        {
+          title: '实战经验',
+          collapsable: false,
+          children: [],
+        },
+        {
+          title: '面试常题',
+          collapsable: false,
+          children: [],
+        }
+      ],
+      '/course/js/': ['promise', 'regular'],
       '/thing/': ['/thing/'],
       '/photo/': ['/photo/', 'happy'],
     },
